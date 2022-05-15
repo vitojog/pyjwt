@@ -98,7 +98,7 @@ class PyJWS:
                 is_payload_detached = True
 
         # Header
-        header = {"typ": self.header_typ, "alg": algorithm}  # type: Dict[str, Any]
+        header = {"alg": algorithm, "typ": self.header_typ}  # type: Dict[str, Any]
 
         if headers:
             self._validate_headers(headers)
